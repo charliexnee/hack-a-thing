@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // Make request to get list of champions
   // I manually put in the current patch, not sure how to dynamically update
-    const championURL = 'http://ddragon.leagueoflegends.com/cdn/10.19.1/data/en_US/champion.json'
+    const championURL = 'https://ddragon.leagueoflegends.com/cdn/10.19.1/data/en_US/champion.json'
     $.ajax({
       url: championURL,
       type: 'GET',
@@ -36,7 +36,7 @@ $(document).ready(function(){
         return
       }
       // request api data
-      const championURL = 'http://ddragon.leagueoflegends.com/cdn/10.19.1/data/en_US/champion/' + champion + ".json";
+      const championURL = 'https://ddragon.leagueoflegends.com/cdn/10.19.1/data/en_US/champion/' + champion + ".json";
       $.ajax({
         url: championURL,
         type: 'GET',
