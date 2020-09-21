@@ -54,7 +54,17 @@ $(document).ready(function(){
               newRows[rank][spell] = cooldowns[rank] * (100 - cdr) / 100;
             }
           }
-
+          // add spell names descriptions
+          var nameRow = "<tr><td> Name </td>"
+          for (var spell = 0; spell < spells.length; spell++){
+            nameRow += "<td>" + spells[spell]['name'] + "</td>"
+          }
+          $('#cooldown-rows').append(nameRow);
+          var descriptionRow = "<tr><td> Description </td>"
+          for (var spell = 0; spell < spells.length; spell++){
+            descriptionRow += "<td>" + spells[spell]['description'] + "</td>"
+          }
+          $('#cooldown-rows').append(descriptionRow);
         //add row
           for (i = 1; i <= newRows.length; i++){
             var row = "<tr><td>" + i + "</td>";
